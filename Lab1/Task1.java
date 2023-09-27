@@ -4,7 +4,8 @@ import java.util.Random;
 import java.util.Scanner;
 import java.io.*;
 
-class Matrixes {
+public class Task1 {
+
     public static int[][] createMatrix(int rows, int cols) {
         int[][] matrix = new int[rows][cols];
         Random random = new Random();
