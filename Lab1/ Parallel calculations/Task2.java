@@ -50,7 +50,7 @@ public class Task2 {
 
         long startTime = System.currentTimeMillis();
         if (matrixA != null && matrixB != null) {
-            int[][] finalMatrix2 = Task1.multiplyMatrices(matrixA, matrixB);
+            int[][] finalMatrix2 = Lab1.Task1.multiplyMatrices(matrixA, matrixB);
             for(int i = 0; i < finalMatrix1.length; i ++){
                 for(int j = 0; j < finalMatrix1[0].length; j++){
                     if (finalMatrix1[i][j] != finalMatrix2[i][j]) {
@@ -61,7 +61,7 @@ public class Task2 {
             }
             long endTime = System.currentTimeMillis();
             long executionTime = endTime - startTime;
-            Task1.printMatrix(finalMatrix2);
+            Lab1.Task1.printMatrix(finalMatrix2);
             System.out.println("\nЧас виконання: " + executionTime + " мілісекунд");
             System.out.println("\nКількість помилок: " + mistakes);
         }
