@@ -80,7 +80,7 @@ public class Task1 {
         printMatrix(finalMatrix);
         System.out.println("\nЧас виконання: " + executionTime + " мілісекунд");
 
-        try(FileWriter writer = new FileWriter("file1.txt", false)){
+        try(FileWriter writer = new FileWriter("LAB1.txt", false)){
             writer.write("Matrix A:\n");
             writeMatrixFile(matrixA, writer);
             writer.write("Matrix B:\n");
