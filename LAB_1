@@ -1,1 +1,63 @@
+import java.util.Random;
+
+class Matrixes{
+    public static int[][] createMatrix(int rows, cols){
+        int[][] matrix = new int[][];
+        Random random = new Random();
+
+        for (int i = 0; i < rows; i++){
+            for (int j = 0; j < cols; j++){
+                matrix[i][j] = random.nextInt(10);
+            }
+        }
+        return matrix;
+    }
+
+    public static int[][] multiplyMatrices (int matrixA[][], int matrixB[][]){
+        int m = matrixA.legnth;
+        int n = matrixA[0].length;
+        int k = matrixB[0].length;
+        int[][] finalMatrix = new int[n][k];
+
+        for (int i = 0; i < n; i++){
+            for (int j = 0; j < k; k++){
+                int sum = 0;
+                for (int p = 0; p < n; p++){
+                    sum += matrixA[i][p] * matrixB[p][n];
+                }
+                result[i][j] = sum;
+            }
+        }
+        return result;
+    }
+
+    public static void printMatrix(int [][]matrix){
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                System.out.print(matrix[i][j] + "\t");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String [] args) {
+        int n = 3;
+        int m = 4;
+        int k = 2;
+
+        int[][] matrixA = createMatrix(n,m);
+        int[][] matrixB = createMatrix(m,k);
+        System.out.println("Матриця А: ");
+        printMatrix(matrixA);
+        System.out.println("Матриця B: ");
+        printMatrix(matrixB);
+
+        int[][] finalMatrix = multiplyMatrices(matrixA, matrixB);
+        System.out.println("Результат множення матриць: ")
+        printMatrix(result);
+    }
+}
+
+
+
 
